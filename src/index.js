@@ -9,7 +9,7 @@ const app = express()
 const server = http.createServer(app)
 const io = socketio(server)
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 4000
 const publicDirectoryPath = path.join(__dirname, '../public')
 
 app.use(express.static(publicDirectoryPath))
@@ -42,7 +42,7 @@ io.on('connection', (socket) => {
 
         io.to(user.room).emit('message', generateMessage(user.username, message))
         callback()
-    })
+    }) 
 
     socket.on('sendLocation', (coords, callback) => {
         const user = getUser(socket.id)
