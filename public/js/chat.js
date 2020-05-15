@@ -15,7 +15,7 @@ const sidebarTemplate = document.querySelector('#sidebar-template').innerHTML
 const { username, room } = Qs.parse(location.search, { ignoreQueryPrefix: true })
 
 const autoscroll = () => {
-    // new message element
+    // new message element 
     const $newMessage = $messages.lastElementChild
 
     // get height of new message

@@ -33,7 +33,7 @@ io.on('connection', (socket) => {
             users: getUsersInRoom(user.room),
         })
 
-        callback()
+        callback() 
     })
 
     socket.on('sendMessage', (message, callback) => {
